@@ -1,0 +1,143 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'landingPage/style.css' %}">
+    <style>
+        
+    </style>
+    {% block css %}
+    {% endblock %}
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top mynav " >
+        <div class="container">
+          <a class="navbar-brand text-success hed-color fw-bold" href="/">Educational Instituation</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" aria-current="page" href="/#hero">Home</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" aria-current="page" href="/#about-us">About us</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" aria-current="page" href="/#our-program">Our programs</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" aria-current="page" href="/#contact-us">Contact us</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" href="/admin/admin/">Admin Login</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" href="">Teacher Login</a>
+              </li>
+              &nbsp;&nbsp;&nbsp;
+              <li class="nav-item dark-blue">
+                <a class="nav-link active dark-blue" href="">Student Login</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+      {% block body %}
+      {% endblock %}
+
+    <!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-muted" style="background-color: #131E3D!important;">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-around p-4 ">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span class="we-are">Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-facebook-f we-are"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-twitter we-are"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-google we-are"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-instagram we-are"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-linkedin we-are"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fa fa-github we-are"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        {% block footer %}
+        {% endblock %}
+        
+        <!-- Grid column -->
+
+
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4 we-are">Contact</h6>
+          <p class="we-are"><i class="fa fa-home me-3 text-secondary we-are" we-are></i> New York, NY 10012, US</p>
+          <p class="we-are">
+            <i class="fa fa-envelope me-3 text-secondary we-are"></i>
+            info@example.com
+          </p>
+          <p class="we-are"><i class="fa fa-phone me-3 text-secondary we-are"></i> + 01 234 567 88</p>
+          <p class="we-are"><i class="fa fa-print me-3 text-secondary we-are"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="">Django</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    {% block js %}
+    {% endblock %}
+  </body>
+</html>

@@ -1,0 +1,128 @@
+{% extends 'user/student/student_navbar.html' %}
+
+{% block title %} Profile {% endblock %}
+
+{% block css %}
+<style>
+.profile{
+padding: 3%;
+margin-top: 3%;
+margin-bottom: 3%;
+border-radius: 0.5rem;
+background: #fff;
+}
+.profile-img{
+text-align: center;
+}
+.profile-img .file {
+position: relative;
+overflow: hidden;
+margin-top: -20%;
+width: 70%;
+border: none;
+border-radius: 0;
+font-size: 15px;
+background: #212529b8;
+}
+</style>
+{% endblock %}
+{% block body %}
+
+<div class="container profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img" >
+                    <img class="rounded-circle shadow-4-strong" src="{{user.studentprofile.image.url}}" alt=" image " width="310px" height="270px">
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="profile-tab">
+                    <div class="tab-pane">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Username:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.username}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Full Name:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.full_name}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Student ID:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.student_id}}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Address:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.address}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Email:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.email}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Phone Number:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.phone}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">University:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.university}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Major:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.major}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Date of Birth:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.date_of_birth}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="hed-color " style="font-size: 19px;">Gender:</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="dark-blue " style="font-size: 19px;">{{user.studentprofile.gender}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/users/update_student_profile/{{ user.studentprofile.id }}" style="width: 9rem;" class="btn brown-bg mt-3">Edit Profile</a>
+                </div>
+            </div>
+</div>
+</div>
+{% endblock %}
